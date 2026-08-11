@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="일단 앱의 계정 및 사용자 데이터 삭제 방법을 안내합니다.">
+    <meta name="theme-color" content="#6c63ff">
+    <title>계정 및 데이터 삭제 안내 | 일단</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --primary: #6c63ff;
+            --primary-dark: #544bd8;
+            --text: #242331;
+            --muted: #6f6d7d;
+            --line: #e8e7ee;
+            --surface: #ffffff;
+            --surface-soft: #f7f6fb;
+            --warning-bg: #fff8e8;
+            --warning-line: #f1d18a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--surface-soft);
+            color: var(--text);
+            font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+            word-break: keep-all;
+        }
+
+        main {
+            width: min(100% - 32px, 820px);
+            margin: 48px auto;
+            padding: 56px 64px 64px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(36, 35, 49, 0.06);
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            color: var(--primary-dark);
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-mark {
+            display: grid;
+            width: 34px;
+            height: 34px;
+            place-items: center;
+            border-radius: 10px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 15px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 0;
+            line-height: 1.35;
+            letter-spacing: -0.035em;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: clamp(30px, 5vw, 42px);
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            font-size: 24px;
+        }
+
+        h3 {
+            margin: 28px 0 10px;
+            font-size: 18px;
+        }
+
+        p {
+            margin: 0 0 16px;
+        }
+
+        ul,
+        ol {
+            margin: 10px 0 18px;
+            padding-left: 24px;
+        }
+
+        li + li {
+            margin-top: 7px;
+        }
+
+        a {
+            color: var(--primary-dark);
+            font-weight: 650;
+            text-underline-offset: 3px;
+        }
+
+        section {
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid var(--line);
+        }
+
+        .updated {
+            margin-bottom: 28px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .summary,
+        .email-card,
+        .notice {
+            border-radius: 14px;
+            padding: 20px 22px;
+        }
+
+        .summary {
+            margin-top: 28px;
+            background: var(--surface-soft);
+        }
+
+        .summary dl {
+            display: grid;
+            grid-template-columns: 104px 1fr;
+            gap: 8px 16px;
+            margin: 0;
+        }
+
+        .summary dt {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .summary dd {
+            margin: 0;
+            font-weight: 650;
+        }
+
+        .email-card {
+            margin: 22px 0;
+            background: #f0efff;
+            border: 1px solid #dcd9ff;
+        }
+
+        .email-card p:last-child,
+        .notice p:last-child {
+            margin-bottom: 0;
+        }
+
+        .email-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            margin-top: 6px;
+            padding: 9px 18px;
+            border-radius: 10px;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 750;
+            text-decoration: none;
+        }
+
+        .email-button:hover {
+            background: var(--primary-dark);
+        }
+
+        .notice {
+            margin: 24px 0;
+            background: var(--warning-bg);
+            border: 1px solid var(--warning-line);
+        }
+
+        .path {
+            display: inline-block;
+            margin: 2px 0 10px;
+            padding: 7px 12px;
+            border-radius: 8px;
+            background: var(--surface-soft);
+            font-weight: 700;
+        }
+
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                background: var(--surface);
+                font-size: 15px;
+            }
+
+            main {
+                width: 100%;
+                margin: 0;
+                padding: 32px 22px 44px;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            section {
+                padding-top: 32px;
+                margin-top: 32px;
+            }
+
+            .summary dl {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+
+            .summary dd + dt {
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <div class="brand"><span class="brand-mark" aria-hidden="true">일</span>일단</div>
+        <h1>계정 및 데이터 삭제 안내</h1>
+        <p class="updated">최종 수정일: 2026년 8월 4일</p>
+        <p>본 페이지는 Google Play에 게시된 일단 앱의 계정 및 사용자 데이터 삭제 방법을 안내합니다.</p>
+
+        <div class="summary">
+            <dl>
+                <dt>앱 이름</dt>
+                <dd>일단: 일정 관리, 투두리스트를 단순하게</dd>
+                <dt>개발자</dt>
+                <dd>손현수</dd>
+                <dt>문의 이메일</dt>
+                <dd><a href="mailto:hj296914@gmail.com">hj296914@gmail.com</a></dd>
+            </dl>
+        </div>
+    </header>
+
+    <section aria-labelledby="email-request">
+        <h2 id="email-request">1. 이메일로 삭제 요청하기</h2>
+        <p>앱을 삭제했거나 앱에 접속할 수 없는 경우 이메일로 계정 및 데이터 삭제를 요청할 수 있습니다.</p>
+
+        <div class="email-card">
+            <p><strong>이메일</strong><br><a href="mailto:hj296914@gmail.com">hj296914@gmail.com</a></p>
+            <p><strong>제목</strong><br>[일단] 계정 및 데이터 삭제 요청</p>
+            <a class="email-button" href="mailto:hj296914@gmail.com?subject=%5B%EC%9D%BC%EB%8B%A8%5D%20%EA%B3%84%EC%A0%95%20%EB%B0%8F%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">삭제 요청 이메일 보내기</a>
+        </div>
+
+        <p>이메일에는 다음 정보를 포함해 주세요.</p>
+        <ol>
+            <li>사용한 로그인 방식: 카카오 또는 Apple</li>
+            <li>로그인에 사용한 이메일 주소</li>
+            <li>Apple의 이메일 가리기 기능을 사용했다면 Apple에서 발급된 비공개 이메일 주소</li>
+            <li>요청할 삭제 범위</li>
+        </ol>
+
+        <p>삭제 범위는 다음 중에서 선택할 수 있습니다.</p>
+        <ul>
+            <li>기존 일단 서비스 계정과 서버 데이터 삭제</li>
+            <li>클라우드 백업 계정과 백업 데이터 삭제</li>
+            <li>기존 계정과 클라우드 백업 계정 모두 삭제</li>
+            <li>계정은 유지하고 클라우드 백업 데이터만 삭제</li>
+        </ul>
+
+        <div class="notice">
+            <p>계정 도용을 방지하기 위해 요청을 보낸 이메일과 계정 정보를 확인하는 절차가 진행될 수 있습니다. <strong>비밀번호, OAuth 토큰 또는 인증 코드는 절대로 이메일로 보내지 마세요.</strong></p>
+        </div>
+        <p>본인 확인이 완료된 날로부터 7일 이내에 삭제 요청을 처리하고 결과를 이메일로 안내합니다.</p>
+    </section>
+
+    <section aria-labelledby="in-app-deletion">
+        <h2 id="in-app-deletion">2. 앱에서 직접 삭제하기</h2>
+        <p>앱을 사용할 수 있는 경우 설정 화면에서도 직접 삭제할 수 있습니다.</p>
+
+        <h3>기존 일단 계정 삭제</h3>
+        <p class="path">마이페이지 → 설정 → 회원 탈퇴</p>
+        <p>기존 일단 서버 계정과 계정에 연결된 서버 데이터를 삭제합니다.</p>
+
+        <h3>클라우드 백업 계정 삭제</h3>
+        <p class="path">마이페이지 → 설정 → 클라우드 백업 → 백업 계정 삭제</p>
+        <p>다음 데이터가 삭제됩니다.</p>
+        <ul>
+            <li>클라우드 백업용 OAuth 계정</li>
+            <li>Supabase에 저장된 백업 파일</li>
+            <li>백업 파일의 생성 시각, 크기, 체크섬 등 백업 메타데이터</li>
+        </ul>
+
+        <h3>백업 데이터만 삭제</h3>
+        <p class="path">마이페이지 → 설정 → 클라우드 백업 → 백업 데이터 삭제</p>
+        <p>클라우드 백업 파일과 백업 메타데이터만 삭제합니다. 클라우드 백업 계정은 유지됩니다.</p>
+    </section>
+
+    <section aria-labelledby="deleted-data">
+        <h2 id="deleted-data">3. 삭제되는 데이터</h2>
+        <p>계정 전체 삭제를 요청하면 확인된 삭제 범위에 따라 다음 데이터가 삭제됩니다.</p>
+        <ul>
+            <li>일단 사용자 계정</li>
+            <li>소셜 로그인 제공자와 연결된 계정 식별 정보</li>
+            <li>기존 서버에 저장된 할 일, 카테고리, 일정 및 기록 데이터</li>
+            <li>클라우드 백업용 Supabase 인증 계정</li>
+            <li>클라우드 백업 파일</li>
+            <li>백업 생성 시각, 파일 크기 및 체크섬 등의 백업 메타데이터</li>
+        </ul>
+        <p>카카오 또는 Apple 계정 자체는 삭제되지 않습니다. 일단에 연결된 계정과 데이터만 삭제됩니다.</p>
+        <p>또한 카카오나 Apple 계정을 탈퇴하는 것만으로 일단에 저장된 계정과 백업 데이터가 자동으로 삭제되지는 않을 수 있습니다. 일단 앱 또는 본 페이지의 이메일을 통해 별도로 삭제를 요청해 주세요.</p>
+    </section>
+
+    <section aria-labelledby="local-data">
+        <h2 id="local-data">4. 기기에 저장된 로컬 데이터</h2>
+        <p>일단의 할 일, 카테고리 및 기록은 사용자의 기기 내부에도 저장될 수 있습니다.</p>
+        <p>기기에만 저장된 데이터는 개발자가 원격으로 접근하거나 삭제할 수 없습니다. 다음 방법으로 사용자가 직접 삭제할 수 있습니다.</p>
+        <ul>
+            <li>일단 앱 삭제</li>
+            <li>운영체제 설정에서 일단 앱의 저장 공간 또는 앱 데이터 삭제</li>
+        </ul>
+        <p>클라우드 계정이나 백업 데이터를 삭제해도 현재 기기에 저장된 로컬 데이터가 자동으로 삭제되지는 않습니다.</p>
+    </section>
+
+    <section aria-labelledby="retained-data">
+        <h2 id="retained-data">5. 별도로 보존될 수 있는 데이터</h2>
+        <p>계정 및 백업 데이터는 삭제 완료 후 별도로 보존하지 않습니다.</p>
+        <p>다만, 사용자가 개발자에게 의견 보내기 기능을 통해 직접 제출한 다음 정보는 문의 처리와 서비스 악용 방지를 위해 접수일로부터 최대 1년간 보관될 수 있습니다.</p>
+        <ul>
+            <li>의견 내용</li>
+            <li>사용자가 선택적으로 입력한 연락처</li>
+            <li>앱 버전 및 사용 플랫폼</li>
+            <li>접수 및 처리 상태</li>
+            <li>중복 요청 및 악용 방지를 위한 비식별 처리 정보</li>
+        </ul>
+        <p>위 의견 데이터의 삭제도 원하는 경우 이메일 삭제 요청에 함께 적어주세요. 본인과 연결된 데이터임을 확인할 수 있는 범위에서 함께 삭제합니다.</p>
+        <p>법령에 따라 일정 기간 보관해야 하는 정보가 발생하는 경우에는 해당 법령에서 정한 기간만 보관하고, 보관 기간이 종료되면 지체 없이 삭제합니다.</p>
+    </section>
+
+    <section aria-labelledby="reinstallation">
+        <h2 id="reinstallation">6. 계정 삭제와 앱 재설치</h2>
+        <p>삭제된 계정과 클라우드 백업 데이터는 복구할 수 없습니다.</p>
+        <p>계정 삭제 후 앱을 다시 설치하거나 동일한 카카오 또는 Apple 계정으로 로그인하면 새로운 계정으로 처리될 수 있으며, 이전에 삭제한 백업은 복원할 수 없습니다.</p>
+    </section>
+
+    <section aria-labelledby="contact">
+        <h2 id="contact">7. 문의</h2>
+        <p>계정 또는 데이터 삭제에 관한 문의는 아래 주소로 보내주세요.</p>
+        <ul>
+            <li><strong>담당자:</strong> 손현수</li>
+            <li><strong>이메일:</strong> <a href="mailto:hj296914@gmail.com">hj296914@gmail.com</a></li>
+        </ul>
+    </section>
+
+    <footer>© 2026 일단. All rights reserved.</footer>
+</main>
+</body>
+</html>
