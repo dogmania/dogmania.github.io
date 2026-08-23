@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Framecut — Video to GIF, at the size you need. Trim a clip, set a size limit, convert on-device.">
+<title>Framecut</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#F6F6F5}
+  *{box-sizing:border-box}
+  a{color:#14705E;text-decoration:none}
+  a:hover{color:#125F50}
+
+  .btn{cursor:pointer;transition:background-color .15s ease}
+  .btn-primary{background:#14705E}
+  .btn-primary:hover{background:#125F50}
+  .btn-secondary{background:#FFFFFF}
+  .btn-secondary:hover{background:#FAFAF9}
+
+  .hero-grid{display:grid;grid-template-columns:1fr 414px;gap:64px;padding:76px 56px 84px;align-items:center}
+  .screens-row{display:flex;gap:28px;flex-wrap:wrap}
+  .specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;padding:48px 24px 56px}
+    .hero-grid > div:last-child{width:100%;max-width:340px;margin:0 auto}
+    .specs-grid{grid-template-columns:1fr;gap:40px}
+    .screens-row{gap:16px}
+  }
+</style>
+</head>
+<body>
+<div style="width:100%;max-width:1200px;margin:0 auto;background:#F6F6F5;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#17191B;-webkit-font-smoothing:antialiased">
+
+  <div style="display:flex;align-items:center;gap:10px;padding:28px 56px;border-bottom:1px solid #E2E3E1">
+    <svg width="26" height="26" viewBox="0 0 120 120" style="display:block;border-radius:6px">
+      <rect width="120" height="120" fill="#14705E"></rect>
+      <rect x="26" y="30" width="10" height="12" fill="#F6F6F5"></rect>
+      <rect x="26" y="54" width="10" height="12" fill="#F6F6F5"></rect>
+      <rect x="26" y="78" width="10" height="12" fill="#F6F6F5"></rect>
+      <path d="M52 30 L94 60 L52 90 Z" fill="#F6F6F5"></path>
+    </svg>
+    <div style="flex:1;font:600 15px/1 'IBM Plex Sans',sans-serif;letter-spacing:-0.2px">Framecut</div>
+    <div style="display:flex;gap:26px;font:400 13px/1 'IBM Plex Sans',sans-serif;color:#6B7075">
+      <a href="#how">How it works</a>
+      <a href="#specs">Specs</a>
+      <a href="#privacy">Privacy</a>
+    </div>
+  </div>
+
+  <div class="hero-grid">
+    <div>
+      <div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:1.2px;color:#8B9095">iOS · ANDROID</div>
+      <h1 style="margin:16px 0 0;font:600 52px/1.12 'IBM Plex Sans',sans-serif;letter-spacing:-1.4px;text-wrap:pretty">Video to GIF, at the size you need.</h1>
+      <div style="margin-top:18px;font:400 16px/1.6 'IBM Plex Sans',sans-serif;color:#3E4347;max-width:520px;text-wrap:pretty">Trim a clip, set a file size limit, and Framecut lowers resolution, frame rate and quality only as far as it has to. GIF or animated WebP. Everything runs on your device.</div>
+      <div style="display:flex;gap:10px;margin-top:30px">
+        <!-- TODO: 실제 App Store / Google Play 배포 링크로 교체하세요. -->
+        <a class="btn btn-primary" href="#" style="height:52px;padding:0 22px;border-radius:8px;color:#FFFFFF;display:flex;align-items:center;gap:10px;font:500 15px/1 'IBM Plex Sans',sans-serif">
+          <svg width="15" height="18" viewBox="0 0 15 18" fill="none"><path d="M10.4 0c.1 1.2-.4 2.3-1.1 3.1-.8.9-2 1.6-3 1.5-.1-1.1.4-2.3 1.2-3.1C8.2.6 9.4 0 10.4 0zM14 13.1c-.5 1.2-.8 1.7-1.5 2.7-1 1.4-2.3 3.1-4 3.1-1.5 0-1.9-1-3.9-1-2 0-2.4 1-4 1-1.6 0-2.9-1.6-3.9-3C-1 12.2-1.4 7.5.7 5c1-1.2 2.6-2 4.1-2 1.6 0 2.6 1 3.9 1 1.3 0 2.1-1 3.9-1 1.4 0 2.8.8 3.8 2.1-3.3 1.8-2.8 6.5.6 8z" fill="#FFFFFF" transform="translate(0,-0.5) scale(0.86)"></path></svg>
+          App Store
+        </a>
+        <a class="btn btn-secondary" href="#" style="height:52px;padding:0 22px;border-radius:8px;border:1px solid #D8DAD7;color:#17191B;display:flex;align-items:center;gap:10px;font:500 15px/1 'IBM Plex Sans',sans-serif">
+          <svg width="16" height="18" viewBox="0 0 16 18" fill="none"><path d="M1 1.2v15.6c0 .5.5.8.9.6l8.4-8.4L1.9.6C1.5.4 1 .7 1 1.2z" fill="#17191B"></path><path d="M11.6 7.4L13.9 9l-2.3 1.6-2.3-1.6 2.3-1.6z" fill="#17191B"></path></svg>
+          Google Play
+        </a>
+      </div>
+      <div style="margin-top:16px;font:400 12.5px/1.5 'IBM Plex Sans',sans-serif;color:#9AA0A5">Free with ads. Requires iOS 16 or Android 10.</div>
+    </div>
+
+    <div style="width:100%;max-width:414px;padding:12px;background:#111315;border-radius:44px;box-shadow:0 16px 40px rgba(0,0,0,.16)">
+      <div style="border-radius:32px;overflow:hidden;background:#F6F6F5;aspect-ratio:390/844">
+        <img src="screens/editor.png" alt="Framecut editor screen" style="display:block;width:100%;height:100%;object-fit:contain;object-position:center">
+      </div>
+    </div>
+  </div>
+
+  <div id="how" style="border-top:1px solid #E2E3E1;padding:56px 56px 60px;background:#FFFFFF">
+    <div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:1.2px;color:#8B9095">HOW IT WORKS</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:44px;margin-top:26px">
+      <div>
+        <div style="font:500 12px/1 'IBM Plex Mono',monospace;color:#9AA0A5">01</div>
+        <div style="margin-top:10px;font:500 17px/1.3 'IBM Plex Sans',sans-serif">Trim</div>
+        <div style="margin-top:7px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:#6B7075">Drag two handles on the timeline. The selection plays on loop so you see exactly what you are exporting.</div>
+      </div>
+      <div>
+        <div style="font:500 12px/1 'IBM Plex Mono',monospace;color:#9AA0A5">02</div>
+        <div style="margin-top:10px;font:500 17px/1.3 'IBM Plex Sans',sans-serif">Set a ceiling</div>
+        <div style="margin-top:7px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:#6B7075">Pick format, frame rate, resolution and quality. Add a size limit and the app shows what it lowered, and to what.</div>
+      </div>
+      <div>
+        <div style="font:500 12px/1 'IBM Plex Mono',monospace;color:#9AA0A5">03</div>
+        <div style="margin-top:10px;font:500 17px/1.3 'IBM Plex Sans',sans-serif">Save or share</div>
+        <div style="margin-top:7px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:#6B7075">The result screen reports the applied settings and the final file size before you send it anywhere.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid #E2E3E1;padding:56px 56px 60px">
+    <div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:1.2px;color:#8B9095">SCREENS</div>
+    <div class="screens-row" style="margin-top:26px">
+      <div style="display:flex;flex-direction:column;gap:11px;width:251px">
+        <div style="padding:8px;background:#111315;border-radius:28px">
+          <div style="border-radius:21px;overflow:hidden;background:#F6F6F5;height:509px">
+            <img src="screens/select.png" alt="Select video screen" style="display:block;width:100%;height:100%;object-fit:contain;object-position:center">
+          </div>
+        </div>
+        <div style="font:400 12.5px/1.4 'IBM Plex Sans',sans-serif;color:#6B7075">Pick a clip, or start from a recent one.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:11px;width:251px">
+        <div style="padding:8px;background:#111315;border-radius:28px">
+          <div style="border-radius:21px;overflow:hidden;background:#F6F6F5;height:509px">
+            <img src="screens/editor.png" alt="Editor screen" style="display:block;width:100%;height:100%;object-fit:contain;object-position:center">
+          </div>
+        </div>
+        <div style="font:400 12.5px/1.4 'IBM Plex Sans',sans-serif;color:#6B7075">Every setting and its size cost on one screen.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:11px;width:251px">
+        <div style="padding:8px;background:#111315;border-radius:28px">
+          <div style="border-radius:21px;overflow:hidden;background:#F6F6F5;height:509px">
+            <img src="screens/converting.png" alt="Converting screen" style="display:block;width:100%;height:100%;object-fit:contain;object-position:center">
+          </div>
+        </div>
+        <div style="font:400 12.5px/1.4 'IBM Plex Sans',sans-serif;color:#6B7075">Frame-accurate progress, cancellable.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:11px;width:251px">
+        <div style="padding:8px;background:#111315;border-radius:28px">
+          <div style="border-radius:21px;overflow:hidden;background:#F6F6F5;height:509px">
+            <img src="screens/result.png" alt="Result screen" style="display:block;width:100%;height:100%;object-fit:contain;object-position:center">
+          </div>
+        </div>
+        <div style="font:400 12.5px/1.4 'IBM Plex Sans',sans-serif;color:#6B7075">Before and after, then save or share.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="specs" style="border-top:1px solid #E2E3E1;padding:56px 56px 60px;background:#FFFFFF">
+    <div class="specs-grid">
+      <div>
+        <div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:1.2px;color:#8B9095">SPECS</div>
+        <div style="margin-top:20px;border-top:1px solid #E2E3E1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Output formats</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace;text-align:right">GIF · animated WebP</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Resolution</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace;text-align:right">up to 1080p</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Frame rate</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace;text-align:right">10 – 50 fps</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Size limits</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace;text-align:right">1 / 5 / 10 MB · custom</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Input</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace;text-align:right">MOV · MP4 · M4V</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Max clip length</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace;text-align:right">60 s</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Processing</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace;text-align:right">on-device</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Price</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace;text-align:right">Free, ad-supported</div>
+          </div>
+        </div>
+      </div>
+      <div id="privacy">
+        <div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:1.2px;color:#8B9095">PRIVACY</div>
+        <div style="margin-top:20px;font:400 14px/1.65 'IBM Plex Sans',sans-serif;color:#3E4347;text-wrap:pretty">Conversion runs entirely on the device. Framecut has no accounts, no upload step and no analytics on your media. Videos you select are read only while a conversion is in progress, and the app requests nothing beyond access to the file you pick.</div>
+        <div style="margin-top:20px;border-top:1px solid #E2E3E1">
+          <div style="display:flex;align-items:center;justify-content:space-between;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Data collected</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace">None</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Account required</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace">No</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;height:44px;border-bottom:1px solid #ECEDEB">
+            <div style="font:400 13.5px/1.3 'IBM Plex Sans',sans-serif;color:#6B7075">Works offline</div>
+            <div style="font:500 13px/1.3 'IBM Plex Mono',monospace">Yes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid #E2E3E1;padding:52px 56px 56px;display:flex;flex-wrap:wrap;align-items:center;gap:32px">
+    <div style="flex:1;min-width:200px">
+      <div style="font:600 26px/1.25 'IBM Plex Sans',sans-serif;letter-spacing:-0.6px">Get Framecut</div>
+      <div style="margin-top:7px;font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#6B7075">Free on iOS and Android.</div>
+    </div>
+    <div style="display:flex;gap:10px">
+      <a class="btn btn-primary" href="#" style="height:52px;padding:0 22px;border-radius:8px;color:#FFFFFF;display:flex;align-items:center;font:500 15px/1 'IBM Plex Sans',sans-serif">App Store</a>
+      <a class="btn btn-secondary" href="#" style="height:52px;padding:0 22px;border-radius:8px;border:1px solid #D8DAD7;color:#17191B;display:flex;align-items:center;font:500 15px/1 'IBM Plex Sans',sans-serif">Google Play</a>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid #E2E3E1;padding:22px 56px 40px;display:flex;align-items:center;gap:24px;font:400 12.5px/1 'IBM Plex Sans',sans-serif;color:#9AA0A5">
+    <div style="flex:1">Framecut</div>
+    <a href="#privacy">Privacy</a>
+    <a href="#specs">Support</a>
+  </div>
+</div>
+
+</body>
+</html>
