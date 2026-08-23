@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FrameCut 개인정보 처리방침 — FrameCut의 기기 내 영상 처리 방식과 Google Analytics, Firebase Crashlytics, Google AdMob 등 제3자 서비스가 처리할 수 있는 정보를 안내합니다.">
+<title>FrameCut 개인정보 처리방침</title>
+<link rel="canonical" href="https://dogmania.github.io/framecut/privacy/ko/">
+<link rel="alternate" hreflang="en" href="https://dogmania.github.io/framecut/privacy/en/">
+<link rel="alternate" hreflang="ko" href="https://dogmania.github.io/framecut/privacy/ko/">
+<link rel="alternate" hreflang="x-default" href="https://dogmania.github.io/framecut/privacy/en/">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F6F5;color:#17191B;font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',system-ui,sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all}
+*{box-sizing:border-box}
+a{color:#14705E;text-decoration:none}
+a:hover{color:#125F50}
+.shell{width:100%;max-width:1200px;margin:0 auto}
+.topbar{display:flex;align-items:center;gap:10px;padding:28px 56px;border-bottom:1px solid #E2E3E1}
+.topbar .brand{flex:1;font:600 15px/1 'IBM Plex Sans',sans-serif;letter-spacing:-0.2px;color:#17191B}
+.topbar nav{display:flex;gap:26px;font:400 13px/1 'IBM Plex Sans',sans-serif;color:#6B7075}
+.doc{padding:56px 56px 80px}
+.doc-inner{max-width:720px;margin:0 auto}
+.lang-switch{font:500 13px/1 'IBM Plex Sans',sans-serif}
+.lang-switch span{color:#17191B;font-weight:600}
+.lang-switch a{font-weight:500}
+.lang-switch .sep{color:#D8DAD7;margin:0 8px}
+h1.doc-title{margin:18px 0 6px;font:600 36px/1.3 'IBM Plex Sans',sans-serif;letter-spacing:-0.6px}
+.updated{margin:0 0 32px;font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:#9AA0A5}
+.callout{margin:0 0 36px;padding:20px 24px;border-radius:14px;background:#EAF3F0;border:1px solid #CFE3DD;font:400 15.5px/1.8 'IBM Plex Sans',sans-serif;color:#125F50}
+.intro{font:400 15.5px/1.85 'IBM Plex Sans',sans-serif;color:#3E4347;margin:0 0 8px}
+.doc section{margin-top:8px}
+.doc section h2{margin:0 0 14px;padding-top:36px;border-top:1px solid #E2E3E1;font:600 21px/1.4 'IBM Plex Sans',sans-serif;letter-spacing:-0.2px}
+.doc section:first-of-type h2{border-top:none;padding-top:0}
+.doc h3{margin:26px 0 8px;font:600 15px/1.5 'IBM Plex Sans',sans-serif}
+.doc p{margin:0 0 14px;font:400 15.5px/1.85 'IBM Plex Sans',sans-serif;color:#3E4347}
+.doc ul{margin:0 0 16px;padding-left:22px}
+.doc li{margin:0 0 8px;font:400 15.5px/1.85 'IBM Plex Sans',sans-serif;color:#3E4347}
+.doc a{font-weight:600}
+.link-list{list-style:none;padding-left:0;margin:0}
+.link-list li{margin:0 0 10px}
+.note{margin:10px 0 6px;padding:14px 16px;border-radius:10px;background:#FFF8E8;border:1px solid #F1D18A;font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#6B5B1E}
+.footerbar{border-top:1px solid #E2E3E1;padding:22px 56px 40px;display:flex;align-items:center;gap:24px;font:400 12.5px/1 'IBM Plex Sans',sans-serif;color:#9AA0A5}
+.footerbar .brand{flex:1}
+@media (max-width:640px){
+  .topbar{padding:20px 20px}
+  .topbar nav{gap:16px;font-size:12px}
+  .doc{padding:36px 20px 56px}
+  h1.doc-title{font-size:27px}
+  .footerbar{padding:18px 20px 28px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <div class="topbar">
+    <a href="../../" style="display:flex;align-items:center">
+      <svg width="26" height="26" viewBox="0 0 120 120" style="display:block;border-radius:6px">
+        <rect width="120" height="120" fill="#14705E"></rect>
+        <rect x="26" y="30" width="10" height="12" fill="#F6F6F5"></rect>
+        <rect x="26" y="54" width="10" height="12" fill="#F6F6F5"></rect>
+        <rect x="26" y="78" width="10" height="12" fill="#F6F6F5"></rect>
+        <path d="M52 30 L94 60 L52 90 Z" fill="#F6F6F5"></path>
+      </svg>
+    </a>
+    <div class="brand">Framecut</div>
+    <nav>
+      <a href="../../#how">How it works</a>
+      <a href="../../#specs">Specs</a>
+      <a href="../../#privacy">Privacy</a>
+    </nav>
+  </div>
+
+  <div class="doc">
+    <div class="doc-inner">
+      <div class="lang-switch"><a href="../en/">English</a><span class="sep">|</span><span>한국어</span></div>
+      <h1 class="doc-title">개인정보 처리방침</h1>
+      <p class="updated">최종 수정일: 2026년 8월 23일</p>
+
+      <div class="callout">FrameCut은 사용자가 선택한 영상과 생성된 파일을 기기 내에서 처리합니다. 사용자의 영상은 개발자의 서버로 업로드되거나 저장되지 않습니다.</div>
+
+      <p class="intro">FrameCut("당사", "저희" 또는 "앱")은 사용자의 개인정보를 소중히 여깁니다. 이 개인정보 처리방침은 사용자가 선택한 영상을 GIF 또는 애니메이션 WebP 파일로 변환해주는 앱인 FrameCut을 사용할 때 어떤 정보가 처리되는지 설명합니다.</p>
+
+      <section>
+        <h2>1. 기기 내 영상 처리</h2>
+        <ul>
+          <li>사용자가 FrameCut에서 선택한 영상은 GIF 또는 애니메이션 WebP 파일을 만들기 위해 전적으로 기기 내에서 처리됩니다.</li>
+          <li>원본 영상 파일은 FrameCut 개발자의 서버로 업로드되지 않습니다.</li>
+          <li>생성된 GIF 또는 WebP 파일 역시 FrameCut 서버에 저장되지 않으며, 사용자의 기기에 저장되거나 선택한 방법으로 공유됩니다.</li>
+          <li>FrameCut은 영상 선택과 변환 결과 저장을 위한 목적으로만 사진 보관함(또는 파일) 접근 권한을 요청하며, 이 권한은 그 외의 목적으로 미디어를 읽거나 업로드, 분석하는 데 사용되지 않습니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2. 제3자 서비스를 통해 처리되는 정보</h2>
+        <p>FrameCut을 무료로 안정적으로 제공하고 지속적으로 개선하기 위해 소수의 제3자 서비스를 사용합니다. 이 서비스들은 아래와 같이 제한된 기술 정보와 이용 정보를 처리할 수 있으며, 어떤 서비스도 사용자가 변환한 영상 자체나 그 내용을 전달받지 않습니다.</p>
+
+        <h3>Google Analytics for Firebase</h3>
+        <p>목적: 앱 사용 현황 분석, 기능 이용 패턴 파악, 앱 개선</p>
+        <p>처리될 수 있는 정보:</p>
+        <ul>
+          <li>앱 인스턴스 / 설치 식별자</li>
+          <li>기기 및 운영체제 정보</li>
+          <li>앱 버전</li>
+          <li>앱 상호작용 및 사용 이벤트</li>
+          <li>대략적인 기기, 언어, 지역 정보</li>
+        </ul>
+        <p>FrameCut의 영상 파일이나 그 내용 자체는 Google Analytics로 전송되지 않습니다.</p>
+
+        <h3>Firebase Crashlytics</h3>
+        <p>목적: 충돌 및 오류 분석, 앱 안정성 개선</p>
+        <p>처리될 수 있는 정보:</p>
+        <ul>
+          <li>충돌 스택 트레이스</li>
+          <li>기기 정보</li>
+          <li>운영체제 버전</li>
+          <li>앱 버전</li>
+          <li>진단 정보</li>
+          <li>Crashlytics 설치 식별자</li>
+        </ul>
+        <p>영상 파일이나 그 내용 자체는 Crashlytics로 전송되지 않습니다.</p>
+
+        <h3>Google AdMob</h3>
+        <p>FrameCut은 앱을 무료로 제공하기 위해 광고 노출 목적으로 Google AdMob을 사용합니다.</p>
+        <p>AdMob(Google Mobile Ads SDK)이 처리할 수 있는 정보:</p>
+        <ul>
+          <li>IP 주소</li>
+          <li>기기 및 앱 식별자</li>
+          <li>기기 설정상 허용된 경우의 광고 관련 식별자</li>
+          <li>진단 및 성능 데이터</li>
+          <li>IP 주소로부터 추정되는 대략적인 위치</li>
+          <li>노출, 클릭 등 광고 상호작용 정보</li>
+        </ul>
+        <p>사용자의 지역 및 동의 상태에 따라 맞춤형(personalized) 또는 비맞춤형(non-personalized) 광고가 제공될 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>3. 광고 및 개인정보 선택권</h2>
+        <ul>
+          <li>관련 법률이 요구하는 지역에서는 앱을 처음 실행할 때 표시되는 동의 화면 등을 통해 광고 및 데이터 처리와 관련된 선택권을 제공합니다.</li>
+          <li>이러한 선택은 이후 앱 내 설정(Settings) → Privacy Choices에서 언제든지 다시 확인하거나 변경할 수 있습니다.</li>
+          <li>iOS에서는 필요한 경우 Apple의 App Tracking Transparency(ATT) 기능을 통해, 다른 회사의 앱·웹사이트에서 사용자를 추적하는 데이터가 광고 목적으로 사용되기 전에 이를 허용할지 사용자가 직접 선택할 수 있습니다. 이 선택은 기기의 설정 → 개인정보 보호 및 보안 → 추적 메뉴에서 언제든지 변경할 수 있습니다.</li>
+          <li>추적을 허용하지 않아도 영상을 GIF·WebP로 변환하는 등 FrameCut의 핵심 기능은 동일하게 사용할 수 있습니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. 개발자에게 의견 보내기</h2>
+        <p>FrameCut은 사용자가 자발적으로 의견, 버그 신고, 제안 등을 보낼 수 있는 "Send Feedback to Developer" 기능을 제공합니다.</p>
+        <p>이때 포함될 수 있는 정보:</p>
+        <ul>
+          <li>작성한 피드백 내용</li>
+          <li>선택한 피드백 카테고리</li>
+          <li>사용자가 자발적으로 입력한 경우의 이메일 주소</li>
+        </ul>
+        <div class="note">TODO: 현재 앱 빌드에서 피드백이 어떤 방식으로 전달되는지 확인이 필요합니다. 만약 피드백이 기기의 이메일 앱(mailto) 방식으로 전달되는 경우, FrameCut 개발자는 해당 피드백 내용을 자체 서버에 저장하지 않으며, 이 경우 사용자가 이용하는 이메일 서비스 제공업체의 정책이 적용될 수 있습니다. 피드백 전달 방식이 확정되면 이 섹션을 다시 검토해 확정해주세요.</div>
+      </section>
+
+      <section>
+        <h2>5. 데이터 보관</h2>
+        <p>FrameCut은 별도의 회원 계정을 만들지 않으며, 사용자의 영상 파일을 개발자 서버에 저장하지 않습니다.</p>
+        <p>Google Analytics for Firebase, Firebase Crashlytics, Google AdMob이 처리하는 데이터의 보관 기간은 각 서비스 제공업체의 자체 정책을 따를 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>6. 제3자 서비스</h2>
+        <p>각 서비스 제공업체의 정보 처리 방식에 대해 더 알아보려면 아래 공식 자료를 참고해 주세요.</p>
+        <ul class="link-list">
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 개인정보처리방침</a></li>
+          <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a></li>
+          <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google 광고 관련 개인정보 정보</a></li>
+          <li><a href="https://support.apple.com/en-us/HT212025" target="_blank" rel="noopener noreferrer">Apple App Tracking Transparency 안내</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>7. 아동의 개인정보</h2>
+        <p>FrameCut은 아동의 개인정보를 의도적으로 수집하도록 설계된 서비스가 아닙니다. 아동이 FrameCut을 통해 개인정보를 제공했다고 판단되는 경우, 아래 연락처로 알려주시면 해당 국가·지역의 관련 법률에 따라 적절히 조치하겠습니다.</p>
+      </section>
+
+      <section>
+        <h2>8. 개인정보 처리방침 변경</h2>
+        <p>FrameCut 또는 관련 법률의 변경 사항을 반영하기 위해 이 개인정보 처리방침을 수시로 업데이트할 수 있습니다. 변경 시 이 페이지 상단의 "최종 수정일"을 갱신합니다. 주기적으로 이 페이지를 확인하시길 권장합니다.</p>
+      </section>
+
+      <section>
+        <h2>9. 문의</h2>
+        <p>이 개인정보 처리방침이나 FrameCut의 정보 처리 방식에 대해 문의사항이 있으시면 아래 이메일로 연락해 주세요: <a href="mailto:hj296914@gmail.com">hj296914@gmail.com</a></p>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="footerbar">
+    <div class="brand">Framecut</div>
+    <a href="../../#privacy">Privacy</a>
+    <a href="../../#specs">Support</a>
+  </div>
+</div>
+</body>
+</html>
