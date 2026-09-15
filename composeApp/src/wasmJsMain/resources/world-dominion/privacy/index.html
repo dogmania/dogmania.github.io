@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="World Dominion 개인정보처리방침 — 오프라인 전략 시뮬레이션 게임 World Dominion의 게임 데이터 저장 방식과 Google Firebase Analytics, Google AdMob 등 제3자 서비스가 수집할 수 있는 정보를 안내합니다.">
+<meta name="theme-color" content="#c9a24b">
+<title>World Dominion 개인정보처리방침</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1521;
+    --surface:#161f30;
+    --surface-soft:#1c2740;
+    --line:#2a3550;
+    --text:#e9ecf3;
+    --muted:#8b93a7;
+    --gold:#c9a24b;
+    --gold-soft:#e4c581;
+    --callout-bg:#20304a;
+    --callout-line:#3a4a6b;
+    --warning-bg:#2c2416;
+    --warning-line:#5a4a24;
+    --warning-text:#e4c581;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(201,162,75,0.10), transparent 60%),
+      radial-gradient(ellipse 900px 600px at 100% 0%, rgba(58,74,107,0.25), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    word-break:keep-all;
+    line-height:1.75;
+  }
+  a{color:var(--gold-soft);text-decoration:none}
+  a:hover{color:var(--gold)}
+  .shell{width:100%;max-width:840px;margin:0 auto;padding:0 24px}
+
+  header{padding:56px 0 0}
+  .brand{display:inline-flex;align-items:center;gap:12px;margin-bottom:36px}
+  .brand-mark{
+    display:grid;place-items:center;width:38px;height:38px;border-radius:9px;
+    background:linear-gradient(135deg,var(--gold),#8a6a2c);
+    color:#161018;font:700 15px/1 'IBM Plex Mono',monospace;letter-spacing:-0.5px;
+  }
+  .brand-name{font:600 16px/1 'IBM Plex Sans',sans-serif;letter-spacing:0.2px;color:var(--text)}
+  .brand-tag{display:block;margin-top:3px;font:400 12px/1 'IBM Plex Mono',monospace;color:var(--muted);letter-spacing:0.5px}
+
+  h1{margin:0 0 8px;font:700 32px/1.35 'IBM Plex Sans',sans-serif;letter-spacing:-0.4px;color:#fff}
+  .updated{margin:0 0 28px;font:500 13px/1 'IBM Plex Mono',monospace;color:var(--gold-soft);letter-spacing:0.3px}
+
+  .callout{
+    margin:0 0 40px;padding:20px 22px;border-radius:12px;
+    background:var(--callout-bg);border:1px solid var(--callout-line);
+    font:400 15px/1.85 'IBM Plex Sans',sans-serif;color:#cfd6e8;
+  }
+  .callout strong{color:var(--gold-soft)}
+
+  main{padding-bottom:72px}
+  section{margin-top:0;padding-top:36px;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:none;padding-top:0}
+  section h2{
+    display:flex;align-items:baseline;gap:10px;
+    margin:0 0 16px;font:700 20px/1.4 'IBM Plex Sans',sans-serif;letter-spacing:-0.2px;color:#fff;
+  }
+  section h2 .num{font:600 13px/1 'IBM Plex Mono',monospace;color:var(--gold);opacity:0.85}
+  h3{margin:24px 0 8px;font:600 15px/1.5 'IBM Plex Sans',sans-serif;color:#f2f4f9}
+  p{margin:0 0 14px;font-size:15.5px;color:#c3cadd}
+  ul{margin:0 0 16px;padding-left:20px}
+  li{margin:0 0 8px;font-size:15.5px;color:#c3cadd}
+  li::marker{color:var(--gold);opacity:0.8}
+  strong{color:#f2f4f9}
+
+  .link-list{list-style:none;padding-left:0;margin:0 0 8px}
+  .link-list li{margin:0 0 10px;padding-left:18px;position:relative}
+  .link-list li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+  .link-list a{font-weight:600}
+
+  .contact-card{
+    margin:8px 0 0;padding:22px 24px;border-radius:12px;
+    background:var(--surface);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .contact-card .label{font:500 12px/1 'IBM Plex Mono',monospace;color:var(--muted);letter-spacing:0.4px;margin-bottom:6px}
+  .contact-card .value{font:600 16px/1 'IBM Plex Sans',sans-serif;color:#fff}
+  .contact-card a.btn{
+    padding:10px 18px;border-radius:8px;background:var(--gold);color:#1a1408;
+    font:600 14px/1 'IBM Plex Sans',sans-serif;white-space:nowrap;
+  }
+  .contact-card a.btn:hover{background:var(--gold-soft)}
+
+  footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+
+  @media (max-width:640px){
+    .shell{padding:0 18px}
+    header{padding-top:36px}
+    h1{font-size:26px}
+    section{padding-top:28px}
+    .contact-card{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header>
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">WD</span>
+      <span>
+        <span class="brand-name">World Dominion</span>
+        <span class="brand-tag">STRATEGY SIMULATION</span>
+      </span>
+    </div>
+    <h1>World Dominion 개인정보처리방침</h1>
+    <p class="updated">시행일자: 2026년 9월 15일</p>
+
+    <div class="callout">
+      World Dominion(이하 "본 앱")은 이용자의 개인정보를 중요하게 생각하며, 관련 법령 및 Apple App Store 정책을 준수합니다. 본 앱은 <strong>회원가입, 로그인, 서버 저장을 사용하지 않는 오프라인 싱글플레이 전략 게임</strong>입니다. 게임 진행 데이터는 기기 내부에만 저장되며 외부로 전송되지 않습니다. 아래에서 설명하는 정보는 광고·통계 목적으로 제3자(Google) SDK를 통해 수집되는 항목에 한정됩니다.
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h2><span class="num">01</span>수집하는 정보</h2>
+
+      <h3>1-1. 게임 진행 데이터 (기기 로컬 저장, 외부 전송 없음)</h3>
+      <ul>
+        <li>저장된 게임 진행 상황(턴, 영토, 병력, 국가 선택 등)은 이용자의 기기에만 저장되며, 본 앱 또는 제3자 서버로 전송되지 않습니다.</li>
+        <li>설정에서 "저장 데이터 초기화"를 선택하면 기기에 저장된 모든 게임 데이터가 삭제됩니다.</li>
+      </ul>
+
+      <h3>1-2. 자동 수집 정보 — Firebase Analytics (Google)</h3>
+      <p>앱 이용 행태 분석을 위해 Google Firebase Analytics를 사용하며, 다음과 같은 이벤트와 정보가 수집됩니다.</p>
+      <ul>
+        <li>앱 및 기기 정보: 기기 모델, OS 버전, 앱 버전, 언어, 대략적 지역(국가 단위), 앱 설치 식별자(Firebase Installation ID)</li>
+        <li>게임 이용 이벤트: 새 게임 시작(시나리오·국가 선택), 불러오기, 턴 종료, 전투 결과(승/패, 피해량), 국가 멸망 발생, 게임 종료(승리/패배, 턴 수, 보유 영토 수), 리워드 광고 시청 보상 수령, 저장 데이터 초기화</li>
+        <li>위 정보에는 이름, 이메일, 전화번호 등 개인을 직접 식별할 수 있는 정보는 포함되지 않습니다.</li>
+      </ul>
+
+      <h3>1-3. 광고 관련 정보 — Google AdMob</h3>
+      <p>본 앱은 배너 광고와 보상형(리워드) 동영상 광고를 게재하기 위해 Google AdMob을 사용합니다.</p>
+      <ul>
+        <li>광고 식별자(iOS IDFA 등), 광고 요청/노출/클릭 정보가 Google에 의해 수집될 수 있습니다.</li>
+        <li>iOS에서는 App Tracking Transparency(ATT) 권한 요청을 통해 이용자가 추적 허용 여부를 직접 선택할 수 있으며, 거부 시 비맞춤형 광고로만 제공됩니다.</li>
+        <li>유럽경제지역(EEA)·영국·스위스 이용자에게는 Google의 UMP(User Messaging Platform)를 통해 맞춤형 광고 동의 여부를 별도로 확인하며, 앱 내 설정 화면의 "광고 개인정보 설정"에서 언제든지 동의를 다시 설정할 수 있습니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">02</span>정보 수집·이용 목적</h2>
+      <ul>
+        <li>앱 이용 현황 및 게임 밸런스 분석, 서비스 개선</li>
+        <li>광고 게재 및 광고 효과 측정</li>
+        <li>비맞춤형/맞춤형 광고 구분 제공(이용자 동의에 따름)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">03</span>제3자 제공 및 처리위탁</h2>
+      <p>본 앱은 수집한 정보를 다음 제3자(모두 Google LLC)를 통해 처리합니다. 각 서비스의 개인정보 처리에 대한 자세한 내용은 아래 링크를 참고하십시오.</p>
+      <ul class="link-list">
+        <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google AdMob</a></li>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Google Firebase / Analytics</a></li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 개인정보처리방침</a></li>
+      </ul>
+      <p>위 서비스 제공 과정에서 정보가 해외(미국 등 Google 서버 소재지)로 이전될 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">04</span>아동의 개인정보</h2>
+      <p>본 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 개인정보를 고의로 수집하지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">05</span>이용자의 권리와 선택</h2>
+      <ul>
+        <li><strong>광고 추적 동의 변경(iOS)</strong>: 기기 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 언제든지 변경할 수 있습니다.</li>
+        <li><strong>맞춤형 광고 동의 변경</strong>: 앱 내 설정 &gt; 개인정보 &gt; "광고 개인정보 설정"에서 다시 설정할 수 있습니다.</li>
+        <li><strong>게임 데이터 삭제</strong>: 앱 내 설정 &gt; "저장 데이터 초기화"에서 기기에 저장된 게임 데이터를 즉시 삭제할 수 있습니다.</li>
+        <li><strong>앱 삭제</strong>: 앱을 삭제하면 기기에 저장된 모든 로컬 데이터가 함께 삭제됩니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">06</span>보유 및 파기</h2>
+      <p>게임 진행 데이터는 기기에만 저장되며 이용자가 직접 삭제하거나 앱을 삭제할 때까지 보관됩니다. Firebase Analytics를 통해 수집된 이용 통계는 Google의 데이터 보관 정책에 따라 처리됩니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">07</span>보안</h2>
+      <p>본 앱은 이용자 정보 보호를 위해 합리적인 수준의 기술적 조치를 취하고 있습니다. 다만 인터넷을 통한 전송은 완전히 안전하다고 보장할 수 없습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">08</span>문의처</h2>
+      <p>개인정보 관련 문의사항은 아래로 연락해 주시기 바랍니다.</p>
+      <div class="contact-card">
+        <div>
+          <div class="label">EMAIL</div>
+          <div class="value">hj296914@gmail.com</div>
+        </div>
+        <a class="btn" href="mailto:hj296914@gmail.com?subject=%5BWorld%20Dominion%5D%20%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%AC%B8%EC%9D%98">문의 메일 보내기</a>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">09</span>방침의 변경</h2>
+      <p>본 방침은 법령 또는 서비스 변경에 따라 개정될 수 있으며, 변경 시 본 페이지를 통해 고지합니다.</p>
+    </section>
+
+  </main>
+
+  <footer>© 2026 World Dominion. All rights reserved.</footer>
+</div>
+</body>
+</html>
